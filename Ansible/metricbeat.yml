@@ -1,0 +1,45 @@
+---
+- name: installing and launching metricbeat
+  hosts: webservers
+  become: yes
+  tasks:
+
+  - name: download metricbeat deb
+    command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+
+  - name: install metric deb
+    command: dpkg -i metricbeat-7.6.1-amd64.deb
+
+#  - name: Create directory
+#    file:
+#      path: /etc/ansible/filebeat/
+#      state: directory
+      #become: yes
+      #become_user: root
+
+  - name: drop in metricbeat.yml 
+    copy:
+     src: /etc/metricbeat/metricbeat.yml
+     dest: /etc/metricbeat/metricbeat.yml
+#     become: yes
+
+  - name: drop in docker.yml
+    copy:
+     src: /etc/metricbeat/modules.d/docker.yml
+     dest: /etc/metricbeat/modules.d/docker.yml
+#     state: directory
+ #    become: yes
+
+  - name: enable and configure system module
+    command: metricbeat modules enable docker
+    
+  - name: setup metricbeat
+    command: metricbeat setup
+
+  - name: start metricbeat service
+    command: service metricbeat start
+
+  - name: enable service metricbeat on boot
+    systemd:
+      name: metricbeat
+      enabled: yes

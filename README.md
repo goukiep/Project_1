@@ -1,2 +1,2 @@
 # Project_1
-First project fromo the cybersecurity bootcamp
+First project from the cybersecurity bootcamp
