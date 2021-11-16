@@ -104,15 +104,12 @@ SSH into the control node and follow the steps below:
 
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ we use the name of the machine in brackets and specify the ip of the machine.
 - 
-- _Which URL do you navigate to in order to check that the ELK server is running? http://40.83.197.155:5601/app/kibana#/
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+- _Which URL do you navigate to in order to check that the ELK server is running? http://40.***.***.155:5601/app/kibana#/
 
 
-> Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMDMwMTA1OCwtNTYyMjI3MzgwLC02OD
-YwMjc3OTEsLTIxNjYxODIxMiwxMTA5MDgzNTI4LDI1MTU4ODcz
-OSwtMTU1NzA0OTA0OCwzMzUyNzk4MjgsMTk3NTAwNDczNyw5MT
-AyNjQ3ODddfQ==
+eyJoaXN0b3J5IjpbODg1OTgzNDk2LC01NjIyMjczODAsLTY4Nj
+AyNzc5MSwtMjE2NjE4MjEyLDExMDkwODM1MjgsMjUxNTg4NzM5
+LC0xNTU3MDQ5MDQ4LDMzNTI3OTgyOCwxOTc1MDA0NzM3LDkxMD
+I2NDc4N119
 -->
